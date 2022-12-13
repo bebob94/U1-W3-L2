@@ -99,11 +99,7 @@ header("esercizio7")
 const string=["stamttina", "volevo", "morire"]
 
 function lunghezza(array) {
-  const newArray=[]
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-    newArray.push(element.length)
-  }
+  const newArray=array.map(array=> array.length)
   return newArray
 }
 
@@ -113,7 +109,7 @@ console.log(lunghezza(string));
 */
 header("esercizio8")
 function dispari(params) {
-  newArray=[]
+  let newArray=[]
   for (let i = 0; i < 100; i++) {
     let element= i
     if (element %2 !==0) {
@@ -125,8 +121,6 @@ function dispari(params) {
 
 console.log(dispari());
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
-header("esercizio9")
-
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
