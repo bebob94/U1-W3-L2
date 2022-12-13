@@ -1,38 +1,111 @@
+function header(exercise) {
+  console.log("-----------------------", exercise, "-----------------------");
+}
+
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+header("esercizio1")
 
+const exercise1= function(param1,param2){
+  const arrayParam1= [...param1]
+  const arrayParam2= [...param2]
+  const [first, second]= arrayParam1
+  const [, ...rest]= arrayParam2
+  let lastThree= rest.join("")
+  const union= first + second + lastThree
+  
+  return union.toUpperCase()
+}
+
+
+console.log(exercise1("ciao","raga"));
 /* ESERCIZIO 2
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+header("esercizio2")
+function arrayRandom(array) {
+  const randomArray= []
+  for (let i = 0; i < 10; i++) {
+    const element= (Math.floor(Math.random() * 101))
+    randomArray.push(element)
+  }
+  return randomArray
+}
+
+console.log(arrayRandom());
 
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
+header("esercizio3")
+const number= [20,45,33,78,84,91,98]
 
+function numeriPari(array) {
+  const result = number.filter(number => number %2===0);
+  return result
+}
+
+console.log(numeriPari(number));
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+header("esercizio4")
 
+function sum(array) {
+  let tot = 0;
+  for (let i = 0; i < array.length; i++) {
+    tot += array[i]
+  }
+  return tot
+}
+
+console.log(sum(number));
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
+header("esercizio5")
 
+// function somma(array) {
+//   Array.reduce ( callbackfn [ , initialValue ] )
+// }
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+header("esercizio6")
 
+function exercise6(array,n) {
+  const newArrey= array.map(x => x + n)
+  return newArrey
+}
+
+console.log(exercise6(number,10));
 /* ESERCIZIO 8
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+header("esercizio7")
+const string=["stamttina", "volevo", "morire"]
 
+function lunghezza(array) {
+  const newArray=[]
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    newArray.push(element.length)
+  }
+  return newArray
+}
+
+console.log(lunghezza());
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+header("esercizio8")
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
+header("esercizio9")
+
 const movies = [
   {
     Title: "The Lord of the Rings: The Fellowship of the Ring",
@@ -146,23 +219,30 @@ const movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+header("esercizio10")
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+header("esercizio11")
 
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+header("esercizio12")
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+header("esercizio13")
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+header("esercizio14")
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+header("esercizio15")
+
