@@ -36,6 +36,9 @@ function arrayRandom(array) {
 
 console.log(arrayRandom());
 
+
+
+
 /* ESERCIZIO 3
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici (suggerimento: il metodo filter può aiutare)
 */
@@ -53,15 +56,22 @@ console.log(numeriPari(number));
 */
 header("esercizio4")
 
-function sum(array) {
-  let tot = 0;
-  for (let i = 0; i < array.length; i++) {
-    tot += array[i]
-  }
-  return tot
-}
+// function sum(array) {
+//   let tot = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     tot += array[i]
+//   }
+//   return tot
+// }
 
-console.log(sum(number));
+// console.log(sum(number));
+const num= [34,56,3,5,3]
+
+let sum= num.reduce((temp,singlenum)=>{
+  return temp+singlenum;
+},0); 0
+
+console.log(sum);
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
@@ -97,12 +107,23 @@ function lunghezza(array) {
   return newArray
 }
 
-console.log(lunghezza());
+console.log(lunghezza(string));
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 header("esercizio8")
+function dispari(params) {
+  newArray=[]
+  for (let i = 0; i < 100; i++) {
+    let element= i
+    if (element %2 !==0) {
+      newArray.push(element)
+    }
+  }
+  return newArray
+}
 
+console.log(dispari());
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 header("esercizio9")
 
