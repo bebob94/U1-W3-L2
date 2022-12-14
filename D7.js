@@ -56,15 +56,20 @@ console.log(numeriPari(number));
 */
 header("esercizio4")
 
-// function sum(array) {
-//   let tot = 0;
-//   for (let i = 0; i < array.length; i++) {
-//     tot += array[i]
-//   }
-//   return tot
-// }
+function summ(array) {
+  let tot = 0;
+  for (let i = 0; i < array.length; i++) {
+    tot += array[i]
+  }
+  return tot
+}
 
-// console.log(sum(number));
+console.log(summ(number));
+/* ESERCIZIO 5
+Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
+*/
+header("esercizio5")
+
 const num= [34,56,3,5,3]
 
 let sum= num.reduce((temp,singlenum)=>{
@@ -72,14 +77,7 @@ let sum= num.reduce((temp,singlenum)=>{
 },0); 0
 
 console.log(sum);
-/* ESERCIZIO 5
-  Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
-*/
-header("esercizio5")
 
-// function somma(array) {
-//   Array.reduce ( callbackfn [ , initialValue ] )
-// }
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
@@ -236,6 +234,20 @@ const movies = [
 */
 header("esercizio10")
 
+function oldMovie(array) {
+  let movieYear= parseInt(array[0].Year)
+  let namemovie=""
+  for (let i = 0; i < array.length; i++) {
+    if (parseInt(array[i].Year) < movieYear) {
+      movieYear= parseInt(array[i].Year)
+      namemovie= array[i].Title
+    }
+  } 
+  return namemovie
+}
+
+
+console.log(oldMovie(movies));
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
