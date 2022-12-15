@@ -252,24 +252,105 @@ console.log(oldMovie(movies));
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 header("esercizio11")
-
+const numberOfMovies = (array) => {
+  return array.length
+}
+console.log(numberOfMovies(movies));
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 header("esercizio12")
 
+const filmsArray = (array) => {
+  const newArray=array.map(array => array.Title)
+  return newArray
+}
+console.log(filmsArray(movies));
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
 header("esercizio13")
 
+
+const filmsCurrentMillenial = (array) => {
+  const newArray=[]
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i].Year;
+    const filmName= array[i].Title
+    if (element >2000) {
+      newArray.push(filmName)
+      newArray.push(element)
+    }
+  }
+  return newArray
+}
+console.log(filmsCurrentMillenial(movies));
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 header("esercizio14")
+const SearchFilm = ( array, imdbID) => {
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i].imdbID;
+    switch (true) {
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      case element=== imdbID:
+        console.log(array[i]);
+        break;
+      default:
+    }
+  }
+}
 
+SearchFilm(movies,"tt2395427")
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 header("esercizio15")
-
+const totalYears = (array) => {
+  let totalYears= 0
+  for (let i = 0; i < array.length; i++) {
+    const element = parseInt(array[i].Year);
+    totalYears += element
+  }
+  return totalYears
+}
+console.log(totalYears(movies));
